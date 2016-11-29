@@ -13,4 +13,5 @@
 #import <MJExtension.h>
 #import <SDAutoLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 #endif /* Exercise_h */

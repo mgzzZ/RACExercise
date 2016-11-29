@@ -7,11 +7,14 @@
 //
 
 #import "RACBaseExrciseVC.h"
+#import "DelegateVC.h"
 
 @interface RACBaseExrciseVC ()
 @property (strong, nonatomic) IBOutlet UILabel *textLab;
 @property (strong, nonatomic) IBOutlet UIButton *clickBtn;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic ,strong) UIAlertView *alert;
+@property (strong, nonatomic) IBOutlet UITextField *textfield2;
 
 @end
 
@@ -27,7 +30,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"基础练习";
     [self text1];
-    [self text2];
+    [self text5];
     [self text3];
 }
 - (void)text1{
@@ -61,9 +64,39 @@
 
 - (void)text3{
     //监听按钮点击方法
+    @weakify(self);
+
     [[self.clickBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        NSLog(@"点击");
+        DelegateVC *delegate = [[DelegateVC alloc]init];
+        // 代替代理 Block 返回传值
+         @strongify(self);
+        [delegate.subject subscribeNext:^(NSDictionary * x) {
+           @strongify(self);
+            [self text4:x[@"12"]];
+        }];
+        [self.navigationController pushViewController:delegate animated:YES];
     }];
+    //每层Block下都要使用一次strong  才不会有泄露
+}
+
+- (void)text4:(NSString *)dic{
+    self.alert = [[UIAlertView alloc]initWithTitle:@"RAC" message:dic delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [self.alert show];
+    [[self rac_signalForSelector:@selector(alertView:clickedButtonAtIndex:) fromProtocol:@protocol(UIAlertViewDelegate)] subscribeNext:^(RACTuple *x) {
+        NSLog(@"%@",x.first);
+        NSLog(@"%@",x.second);//确认 取消的坐标
+        NSLog(@"%@",x.third);
+    }];
+}
+
+// 同时绑定多个信号
+- (void)text5{
+
+    RACSignal *combinSigal = [RACSignal combineLatest:@[self.textField.rac_textSignal,self.textfield2.rac_textSignal] reduce:^id(NSString *text1,NSString *text2){
+        return @(text1.length && text2.length);
+    }];
+    
+    RAC(self.clickBtn,enabled) = combinSigal;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

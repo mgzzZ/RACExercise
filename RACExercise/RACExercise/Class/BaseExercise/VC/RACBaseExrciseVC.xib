@@ -14,6 +14,7 @@
                 <outlet property="clickBtn" destination="6sa-iu-PJp" id="v6J-OU-Wax"/>
                 <outlet property="textField" destination="1gm-Hf-9M2" id="WjE-4n-UVc"/>
                 <outlet property="textLab" destination="zA5-RH-Q9A" id="pea-Td-tf4"/>
+                <outlet property="textfield2" destination="AhB-87-UFJ" id="AZX-KA-Wha"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,18 +46,31 @@
                         <outlet property="delegate" destination="-1" id="A0G-gM-Xj0"/>
                     </connections>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhB-87-UFJ">
+                    <rect key="frame" x="15" y="192" width="345" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2dP-3S-VIc"/>
+                    </connections>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="AhB-87-UFJ" firstAttribute="top" secondItem="1gm-Hf-9M2" secondAttribute="bottom" constant="30" id="2BH-dz-5Zk"/>
                 <constraint firstItem="1gm-Hf-9M2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="4Oh-pH-iQw"/>
                 <constraint firstItem="zA5-RH-Q9A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="5YL-UY-AfO"/>
+                <constraint firstItem="AhB-87-UFJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="DI9-fM-BX6"/>
                 <constraint firstAttribute="trailing" secondItem="1gm-Hf-9M2" secondAttribute="trailing" constant="15" id="H0k-qy-G9f"/>
                 <constraint firstAttribute="bottom" secondItem="6sa-iu-PJp" secondAttribute="bottom" constant="15" id="KBf-cZ-29z"/>
                 <constraint firstItem="zA5-RH-Q9A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="QKh-gs-qny"/>
                 <constraint firstItem="6sa-iu-PJp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="YrK-Xp-3k6"/>
+                <constraint firstItem="AhB-87-UFJ" firstAttribute="height" secondItem="1gm-Hf-9M2" secondAttribute="height" id="gHS-Tk-FW4"/>
                 <constraint firstAttribute="trailing" secondItem="6sa-iu-PJp" secondAttribute="trailing" constant="15" id="hhR-Li-WG2"/>
                 <constraint firstAttribute="trailing" secondItem="zA5-RH-Q9A" secondAttribute="trailing" constant="15" id="jaQ-9B-5zV"/>
                 <constraint firstItem="1gm-Hf-9M2" firstAttribute="top" secondItem="zA5-RH-Q9A" secondAttribute="bottom" constant="50" id="jjf-Qv-HCs"/>
+                <constraint firstItem="AhB-87-UFJ" firstAttribute="width" secondItem="1gm-Hf-9M2" secondAttribute="width" id="w4B-jS-9lA"/>
             </constraints>
         </view>
     </objects>

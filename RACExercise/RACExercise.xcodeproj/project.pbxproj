@@ -17,6 +17,9 @@
 		C3DD8EFC1DE7EC8A00D82484 /* RACBaseExrciseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8EFA1DE7EC8A00D82484 /* RACBaseExrciseVC.m */; };
 		C3DD8EFD1DE7EC8A00D82484 /* RACBaseExrciseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8EFB1DE7EC8A00D82484 /* RACBaseExrciseVC.xib */; };
 		C3DD8F001DE7FB3700D82484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8EFF1DE7FB3700D82484 /* Assets.xcassets */; };
+		C3DD8FAD1DE972F600D82484 /* DelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8FAB1DE972F600D82484 /* DelegateVC.m */; };
+		C3DD8FAE1DE972F600D82484 /* DelegateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8FAC1DE972F600D82484 /* DelegateVC.xib */; };
+		C3DD8FB01DE9809F00D82484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DD8FAF1DE9809F00D82484 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,10 @@
 		C3DD8EFA1DE7EC8A00D82484 /* RACBaseExrciseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBaseExrciseVC.m; sourceTree = "<group>"; };
 		C3DD8EFB1DE7EC8A00D82484 /* RACBaseExrciseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACBaseExrciseVC.xib; sourceTree = "<group>"; };
 		C3DD8EFF1DE7FB3700D82484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3DD8FAA1DE972F600D82484 /* DelegateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateVC.h; sourceTree = "<group>"; };
+		C3DD8FAB1DE972F600D82484 /* DelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateVC.m; sourceTree = "<group>"; };
+		C3DD8FAC1DE972F600D82484 /* DelegateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DelegateVC.xib; sourceTree = "<group>"; };
+		C3DD8FAF1DE9809F00D82484 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDFAE4426315301016464303 /* libPods-RACExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D989E87A6E5EC2743380ECA3 /* Pods-RACExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACExercise/Pods-RACExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DD8FB01DE9809F00D82484 /* Foundation.framework in Frameworks */,
 				B9940E79BB34274AE6FEB89B /* libPods-RACExercise.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +158,9 @@
 				C3DD8EF91DE7EC8A00D82484 /* RACBaseExrciseVC.h */,
 				C3DD8EFA1DE7EC8A00D82484 /* RACBaseExrciseVC.m */,
 				C3DD8EFB1DE7EC8A00D82484 /* RACBaseExrciseVC.xib */,
+				C3DD8FAA1DE972F600D82484 /* DelegateVC.h */,
+				C3DD8FAB1DE972F600D82484 /* DelegateVC.m */,
+				C3DD8FAC1DE972F600D82484 /* DelegateVC.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 		FF71594A23C23AED8E68F76A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3DD8FAF1DE9809F00D82484 /* Foundation.framework */,
 				CDFAE4426315301016464303 /* libPods-RACExercise.a */,
 			);
 			name = Frameworks;
@@ -235,6 +247,7 @@
 				C3DD8EE91DE7E2B400D82484 /* Info.plist in Resources */,
 				C3DD8EE81DE7E2B400D82484 /* Main.storyboard in Resources */,
 				C3DD8EE71DE7E2B400D82484 /* LaunchScreen.storyboard in Resources */,
+				C3DD8FAE1DE972F600D82484 /* DelegateVC.xib in Resources */,
 				C3DD8EFD1DE7EC8A00D82484 /* RACBaseExrciseVC.xib in Resources */,
 				C3DD8F001DE7FB3700D82484 /* Assets.xcassets in Resources */,
 			);
@@ -298,6 +311,7 @@
 				C3DD8EEB1DE7E2B400D82484 /* AppDelegate.m in Sources */,
 				C3DD8EF01DE7E2F900D82484 /* ViewController.m in Sources */,
 				C3DD8EFC1DE7EC8A00D82484 /* RACBaseExrciseVC.m in Sources */,
+				C3DD8FAD1DE972F600D82484 /* DelegateVC.m in Sources */,
 				C3DD8EF71DE7E92700D82484 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
