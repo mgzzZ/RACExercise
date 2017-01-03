@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "YPCNetworking.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,19 @@
     ViewController *rootVC = [[ViewController alloc]init];
     UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVC];
     self.window.rootViewController = rootNav;
-    
+#pragma mark - 本地服务器
+    NSString *url = @"https://test.gongchangtemai.com/index.php?url=";
+    //    NSString *url = @"http://192.168.1.54/ypcang-api/api/ecapi/index.php?url=";
+    //    NSString *url = @"http://192.168.1.56/ypcang-api/api/ecapi/index.php?url=";
+    //   NSString *url = @"http://192.168.0.104/ypcang-api/api/ecapi/index.php?url=";
+#pragma mark - 外网服务器
+    //   NSString *url = @"https://api.gongchangtemai.com/index.php?url=";
+#pragma mark - 外网服务器
+    [YPCNetworking updateBaseUrl:url];
+    [YPCNetworking setTimeout:15.f];
+    //    [YPCNetworking enableInterfaceDebug:YES];
+    [YPCNetworking obtainDataFromLocalWhenNetworkUnconnected:YES];
+    [YPCNetworking cacheGetRequest:YES shoulCachePost:NO];
     
     return YES;
 }

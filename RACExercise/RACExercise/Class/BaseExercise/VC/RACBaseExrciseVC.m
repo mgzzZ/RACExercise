@@ -29,13 +29,20 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"基础练习";
+
     [self text1];
     [self text5];
     [self text3];
 }
 - (void)text1{
     //lab 绑定 textField
-    RAC(self.textLab,text) = [self.textField rac_textSignal];
+    RAC(self.textLab,text) = [[self.textField rac_textSignal] map:^id(NSString * value) {
+        if (value.length < 10) {
+            return value;
+        }else{
+            return  [value substringToIndex:10];
+        }
+    }];
 }
 - (void)text2{
     //textField 绑定btn
@@ -93,10 +100,21 @@
 - (void)text5{
 
     RACSignal *combinSigal = [RACSignal combineLatest:@[self.textField.rac_textSignal,self.textfield2.rac_textSignal] reduce:^id(NSString *text1,NSString *text2){
-        return @(text1.length && text2.length);
+        return @((text1.length >= 6 && text1.length <= 18) && (text2.length >= 6 && text2.length <= 18));
     }];
-    
-    RAC(self.clickBtn,enabled) = combinSigal;
+    //第一种写法 可以监听多个属性值
+   @weakify(self);
+    [combinSigal subscribeNext:^(NSNumber *x) {
+        @strongify(self);
+        if (x.boolValue == YES) {
+            self.clickBtn.backgroundColor = [UIColor redColor];
+        }else{
+            self.clickBtn.backgroundColor = [UIColor whiteColor];
+        }
+        self.clickBtn.enabled = x.boolValue;
+    }];
+    //第二种方法 方便 监听一个属性值
+    //RAC(self.clickBtn,enabled) = combinSigal;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

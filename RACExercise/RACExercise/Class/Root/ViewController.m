@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "RACBaseExrciseVC.h"
-
+#import "MvvMViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
@@ -49,8 +49,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    RACBaseExrciseVC *baseexrciseVC = [[RACBaseExrciseVC alloc]init];
-    [self.navigationController pushViewController:baseexrciseVC animated:YES];
+   
+    switch (indexPath.row) {
+        case 0:
+        {
+            RACBaseExrciseVC *baseexrciseVC = [[RACBaseExrciseVC alloc]init];
+            [self.navigationController pushViewController:baseexrciseVC animated:YES];
+        }
+            break;
+        case 1:{
+            MvvMViewController *mvvm = [[MvvMViewController alloc]init];
+            [self.navigationController pushViewController:mvvm animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark-- lazy loading
@@ -68,7 +83,7 @@
 
 - (NSArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = @[@"BaseExercise"];
+        _dataArr = @[@"BaseExercise",@"MVVM"];
     }
     return _dataArr;
 }

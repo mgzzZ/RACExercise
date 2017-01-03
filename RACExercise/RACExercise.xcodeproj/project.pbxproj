@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B9940E79BB34274AE6FEB89B /* libPods-RACExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFAE4426315301016464303 /* libPods-RACExercise.a */; };
+		C31144BC1E0D399100322B0A /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31144BB1E0D399100322B0A /* GradientView.m */; };
+		C34CC4241E1B409300795371 /* ZGMUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4231E1B409300795371 /* ZGMUILabel.m */; };
+		C34CC4271E1B4E9900795371 /* ZGMUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4261E1B4E9900795371 /* ZGMUIButton.m */; };
+		C34CC43B1E1B825900795371 /* YPCNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC43A1E1B825900795371 /* YPCNetworking.m */; };
+		C34CC4591E1BDE2B00795371 /* ZGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4451E1BDE2B00795371 /* ZGMViewController.m */; };
+		C34CC45A1E1BDE2B00795371 /* ZGMBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4481E1BDE2B00795371 /* ZGMBaseCollectionViewCell.m */; };
+		C34CC45B1E1BDE2B00795371 /* ZGMBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC44A1E1BDE2B00795371 /* ZGMBaseTableViewCell.m */; };
+		C34CC45C1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC44C1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.m */; };
+		C34CC45D1E1BDE2B00795371 /* ZGMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC44E1E1BDE2B00795371 /* ZGMView.m */; };
+		C34CC45E1E1BDE2B00795371 /* ZGMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4511E1BDE2B00795371 /* ZGMViewModel.m */; };
+		C34CC46C1E1BDE7E00795371 /* MMVMCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4611E1BDE7E00795371 /* MMVMCellViewModel.m */; };
+		C34CC46D1E1BDE7E00795371 /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4631E1BDE7E00795371 /* MVVMViewModel.m */; };
+		C34CC46E1E1BDE7E00795371 /* MVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4661E1BDE7E00795371 /* MVVMCell.m */; };
+		C34CC46F1E1BDE7E00795371 /* MvvMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC4681E1BDE7E00795371 /* MvvMView.m */; };
+		C34CC4701E1BDE7E00795371 /* MvvMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34CC46B1E1BDE7E00795371 /* MvvMViewController.m */; };
 		C3DD8EE71DE7E2B400D82484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8EDA1DE7E2B400D82484 /* LaunchScreen.storyboard */; };
 		C3DD8EE81DE7E2B400D82484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8EDC1DE7E2B400D82484 /* Main.storyboard */; };
 		C3DD8EE91DE7E2B400D82484 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DD8EDE1DE7E2B400D82484 /* Info.plist */; };
@@ -24,6 +39,42 @@
 
 /* Begin PBXFileReference section */
 		22B692038379274F35DDF978 /* Pods-RACExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACExercise/Pods-RACExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		C31144BA1E0D399100322B0A /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		C31144BB1E0D399100322B0A /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		C34CC4221E1B409300795371 /* ZGMUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMUILabel.h; sourceTree = "<group>"; };
+		C34CC4231E1B409300795371 /* ZGMUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMUILabel.m; sourceTree = "<group>"; };
+		C34CC4251E1B4E9900795371 /* ZGMUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMUIButton.h; sourceTree = "<group>"; };
+		C34CC4261E1B4E9900795371 /* ZGMUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMUIButton.m; sourceTree = "<group>"; };
+		C34CC4391E1B825900795371 /* YPCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPCNetworking.h; sourceTree = "<group>"; };
+		C34CC43A1E1B825900795371 /* YPCNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPCNetworking.m; sourceTree = "<group>"; };
+		C34CC4441E1BDE2B00795371 /* ZGMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMViewController.h; sourceTree = "<group>"; };
+		C34CC4451E1BDE2B00795371 /* ZGMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMViewController.m; sourceTree = "<group>"; };
+		C34CC4471E1BDE2B00795371 /* ZGMBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		C34CC4481E1BDE2B00795371 /* ZGMBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		C34CC4491E1BDE2B00795371 /* ZGMBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMBaseTableViewCell.h; sourceTree = "<group>"; };
+		C34CC44A1E1BDE2B00795371 /* ZGMBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMBaseTableViewCell.m; sourceTree = "<group>"; };
+		C34CC44B1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMTableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		C34CC44C1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		C34CC44D1E1BDE2B00795371 /* ZGMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMView.h; sourceTree = "<group>"; };
+		C34CC44E1E1BDE2B00795371 /* ZGMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMView.m; sourceTree = "<group>"; };
+		C34CC4501E1BDE2B00795371 /* ZGMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMViewModel.h; sourceTree = "<group>"; };
+		C34CC4511E1BDE2B00795371 /* ZGMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMViewModel.m; sourceTree = "<group>"; };
+		C34CC4531E1BDE2B00795371 /* ZGMBaseCollectionViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMBaseCollectionViewCellProtocol.h; sourceTree = "<group>"; };
+		C34CC4541E1BDE2B00795371 /* ZGMBaseTableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMBaseTableViewCellProtocol.h; sourceTree = "<group>"; };
+		C34CC4551E1BDE2B00795371 /* ZGMTableViewHeaderFooterViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMTableViewHeaderFooterViewProtocol.h; sourceTree = "<group>"; };
+		C34CC4561E1BDE2B00795371 /* ZGMViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMViewControllerProtocol.h; sourceTree = "<group>"; };
+		C34CC4571E1BDE2B00795371 /* ZGMViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMViewModelProtocol.h; sourceTree = "<group>"; };
+		C34CC4581E1BDE2B00795371 /* ZGMViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMViewProtocol.h; sourceTree = "<group>"; };
+		C34CC4601E1BDE7E00795371 /* MMVMCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMVMCellViewModel.h; sourceTree = "<group>"; };
+		C34CC4611E1BDE7E00795371 /* MMVMCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVMCellViewModel.m; sourceTree = "<group>"; };
+		C34CC4621E1BDE7E00795371 /* MVVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
+		C34CC4631E1BDE7E00795371 /* MVVMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
+		C34CC4651E1BDE7E00795371 /* MVVMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMCell.h; sourceTree = "<group>"; };
+		C34CC4661E1BDE7E00795371 /* MVVMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMCell.m; sourceTree = "<group>"; };
+		C34CC4671E1BDE7E00795371 /* MvvMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvvMView.h; sourceTree = "<group>"; };
+		C34CC4681E1BDE7E00795371 /* MvvMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MvvMView.m; sourceTree = "<group>"; };
+		C34CC46A1E1BDE7E00795371 /* MvvMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvvMViewController.h; sourceTree = "<group>"; };
+		C34CC46B1E1BDE7E00795371 /* MvvMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MvvMViewController.m; sourceTree = "<group>"; };
 		C3DD8EBB1DE7DD0A00D82484 /* RACExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DD8EDB1DE7E2B400D82484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DD8EDD1DE7E2B400D82484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +119,142 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C31144B91E0D398100322B0A /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				C31144BA1E0D399100322B0A /* GradientView.h */,
+				C31144BB1E0D399100322B0A /* GradientView.m */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		C33390C11E1A5E9E0056430E /* ZGMKit */ = {
+			isa = PBXGroup;
+			children = (
+				C33390C21E1A5E9E0056430E /* MVVMbase */,
+				C33390C31E1A5E9E0056430E /* Uikit */,
+			);
+			path = ZGMKit;
+			sourceTree = "<group>";
+		};
+		C33390C21E1A5E9E0056430E /* MVVMbase */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4431E1BDE2B00795371 /* VC */,
+				C34CC4461E1BDE2B00795371 /* View */,
+				C34CC44F1E1BDE2B00795371 /* ViewModel */,
+				C34CC4521E1BDE2B00795371 /* Protocol */,
+			);
+			path = MVVMbase;
+			sourceTree = "<group>";
+		};
+		C33390C31E1A5E9E0056430E /* Uikit */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4221E1B409300795371 /* ZGMUILabel.h */,
+				C34CC4231E1B409300795371 /* ZGMUILabel.m */,
+				C34CC4251E1B4E9900795371 /* ZGMUIButton.h */,
+				C34CC4261E1B4E9900795371 /* ZGMUIButton.m */,
+			);
+			path = Uikit;
+			sourceTree = "<group>";
+		};
+		C34CC4281E1B767000795371 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC45F1E1BDE7E00795371 /* ViewModel */,
+				C34CC4641E1BDE7E00795371 /* View */,
+				C34CC4691E1BDE7E00795371 /* VC */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		C34CC4381E1B825900795371 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4391E1B825900795371 /* YPCNetworking.h */,
+				C34CC43A1E1B825900795371 /* YPCNetworking.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C34CC4431E1BDE2B00795371 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4441E1BDE2B00795371 /* ZGMViewController.h */,
+				C34CC4451E1BDE2B00795371 /* ZGMViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		C34CC4461E1BDE2B00795371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4471E1BDE2B00795371 /* ZGMBaseCollectionViewCell.h */,
+				C34CC4481E1BDE2B00795371 /* ZGMBaseCollectionViewCell.m */,
+				C34CC4491E1BDE2B00795371 /* ZGMBaseTableViewCell.h */,
+				C34CC44A1E1BDE2B00795371 /* ZGMBaseTableViewCell.m */,
+				C34CC44B1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.h */,
+				C34CC44C1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.m */,
+				C34CC44D1E1BDE2B00795371 /* ZGMView.h */,
+				C34CC44E1E1BDE2B00795371 /* ZGMView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C34CC44F1E1BDE2B00795371 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4501E1BDE2B00795371 /* ZGMViewModel.h */,
+				C34CC4511E1BDE2B00795371 /* ZGMViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C34CC4521E1BDE2B00795371 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4531E1BDE2B00795371 /* ZGMBaseCollectionViewCellProtocol.h */,
+				C34CC4541E1BDE2B00795371 /* ZGMBaseTableViewCellProtocol.h */,
+				C34CC4551E1BDE2B00795371 /* ZGMTableViewHeaderFooterViewProtocol.h */,
+				C34CC4561E1BDE2B00795371 /* ZGMViewControllerProtocol.h */,
+				C34CC4571E1BDE2B00795371 /* ZGMViewModelProtocol.h */,
+				C34CC4581E1BDE2B00795371 /* ZGMViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C34CC45F1E1BDE7E00795371 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4601E1BDE7E00795371 /* MMVMCellViewModel.h */,
+				C34CC4611E1BDE7E00795371 /* MMVMCellViewModel.m */,
+				C34CC4621E1BDE7E00795371 /* MVVMViewModel.h */,
+				C34CC4631E1BDE7E00795371 /* MVVMViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C34CC4641E1BDE7E00795371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC4651E1BDE7E00795371 /* MVVMCell.h */,
+				C34CC4661E1BDE7E00795371 /* MVVMCell.m */,
+				C34CC4671E1BDE7E00795371 /* MvvMView.h */,
+				C34CC4681E1BDE7E00795371 /* MvvMView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C34CC4691E1BDE7E00795371 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C34CC46A1E1BDE7E00795371 /* MvvMViewController.h */,
+				C34CC46B1E1BDE7E00795371 /* MvvMViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		C3DD8EB21DE7DD0A00D82484 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +296,10 @@
 		C3DD8ED61DE7E2B400D82484 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				C34CC4381E1B825900795371 /* Net */,
+				C34CC4281E1B767000795371 /* MVVM */,
+				C33390C11E1A5E9E0056430E /* ZGMKit */,
+				C31144B91E0D398100322B0A /* GradientView */,
 				C3DD8EEC1DE7E2F900D82484 /* BaseExercise */,
 				C3DD8EED1DE7E2F900D82484 /* Root */,
 			);
@@ -308,11 +499,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34CC4271E1B4E9900795371 /* ZGMUIButton.m in Sources */,
 				C3DD8EEB1DE7E2B400D82484 /* AppDelegate.m in Sources */,
 				C3DD8EF01DE7E2F900D82484 /* ViewController.m in Sources */,
+				C34CC45B1E1BDE2B00795371 /* ZGMBaseTableViewCell.m in Sources */,
+				C34CC4241E1B409300795371 /* ZGMUILabel.m in Sources */,
+				C34CC43B1E1B825900795371 /* YPCNetworking.m in Sources */,
+				C34CC46F1E1BDE7E00795371 /* MvvMView.m in Sources */,
+				C34CC45A1E1BDE2B00795371 /* ZGMBaseCollectionViewCell.m in Sources */,
+				C34CC4701E1BDE7E00795371 /* MvvMViewController.m in Sources */,
+				C34CC46C1E1BDE7E00795371 /* MMVMCellViewModel.m in Sources */,
 				C3DD8EFC1DE7EC8A00D82484 /* RACBaseExrciseVC.m in Sources */,
+				C34CC45E1E1BDE2B00795371 /* ZGMViewModel.m in Sources */,
+				C34CC45C1E1BDE2B00795371 /* ZGMTableViewHeaderFooterView.m in Sources */,
+				C34CC46D1E1BDE7E00795371 /* MVVMViewModel.m in Sources */,
+				C34CC45D1E1BDE2B00795371 /* ZGMView.m in Sources */,
 				C3DD8FAD1DE972F600D82484 /* DelegateVC.m in Sources */,
+				C31144BC1E0D399100322B0A /* GradientView.m in Sources */,
+				C34CC46E1E1BDE7E00795371 /* MVVMCell.m in Sources */,
 				C3DD8EF71DE7E92700D82484 /* main.m in Sources */,
+				C34CC4591E1BDE2B00795371 /* ZGMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
