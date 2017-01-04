@@ -52,6 +52,17 @@
     .bottomSpaceToView(self.contentView,15)
     .widthIs(75);
     [super updateConstraints];
+
+    self.nameLabel.sd_layout
+    .leftSpaceToView(self.headerImageView,15)
+    .rightSpaceToView(self.contentView,15)
+    .topEqualToView(self.headerImageView)
+    .heightIs(20);
+    self.contentLabel.sd_layout
+    .leftEqualToView(self.nameLabel)
+    .topSpaceToView(self.nameLabel,15)
+    .rightSpaceToView(self.contentView ,15)
+    .autoHeightRatio(0);
 }
 
 - (void)setViewModel:(MMVMCellViewModel *)viewModel{
@@ -64,6 +75,8 @@
     self.articleLabel.text = viewModel.articleNum;
     self.peopleNumLabel.text = viewModel.peopleNum;
     self.contentLabel.text = viewModel.content;
+    
+    [self setupAutoHeightWithBottomView:self.contentLabel bottomMargin:15];
 }
 #pragma mark - lazyLoad
 - (UIImageView *)headerImageView {

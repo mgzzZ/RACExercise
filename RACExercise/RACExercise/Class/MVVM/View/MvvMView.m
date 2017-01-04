@@ -9,6 +9,7 @@
 #import "MvvMView.h"
 #import "MVVMViewModel.h"
 #import "MVVMCell.h"
+
 @interface MvvMView ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)MVVMViewModel *viewModel;
@@ -116,7 +117,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 100;
+    MMVMCellViewModel *viewModel = self.viewModel.dataArray[indexPath.row];
+    return [tableView cellHeightForIndexPath:indexPath model:viewModel keyPath:@"viewModel" cellClass:[MVVMCell class]  contentViewWidth:[self cellContentViewWith]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -148,5 +150,15 @@
         }];
     }
     return _tableView;
+}
+
+- (CGFloat)cellContentViewWith{
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    // 适配ios7横屏
+    if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait && [[UIDevice currentDevice].systemVersion floatValue] < 8) {
+        width = [UIScreen mainScreen].bounds.size.height;
+    }
+    return width;
 }
 @end

@@ -9,33 +9,30 @@
 #import "MVVMViewModel.h"
 #import "MMVMCellViewModel.h"
 #import "YPCNetworking.h"
+#import "GuessModel.h"
 @interface MVVMViewModel ()
 @property (nonatomic, assign) NSInteger currentPage;
 @end
 
 @implementation MVVMViewModel
 - (void)zgm_initialize {
-    
     @weakify(self);
     [self.refreshDataCommand.executionSignals.switchToLatest subscribeNext:^(NSDictionary *dict) {
-        
         @strongify(self);
-        
+        NSMutableArray *arr = [GuessModel mj_objectArrayWithKeyValuesArray:dict];
         NSMutableArray *reArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 3; i++) {
-            
-            MMVMCellViewModel *viewModel = [[MMVMCellViewModel alloc] init];
-            //viewModel.headerImageStr = @"http://mmbiz.qpic.cn/mmbiz/XxE4icZUMxeFjluqQcibibdvEfUyYBgrQ3k7kdSMEB3vRwvjGecrPUPpHW0qZS21NFdOASOajiawm6vfKEZoyFoUVQ/640?wx_fmt=jpeg&wxfrom=5";
-            viewModel.name = @"财税培训圈子";
+        for (int i = 0; i < arr.count; i++) {
+            GuessModel *model =arr[i];
+            MMVMCellViewModel *viewModel = [[MMVMCellViewModel alloc] initWithModel:model];
+            viewModel.headerImageStr = model.goods_image;
+            viewModel.name = model.goods_name;
             viewModel.articleNum = @"1568";
             viewModel.peopleNum = @"568";
             viewModel.topicNum = @"5749";
-            viewModel.content = @"自己交保险是不是只能交养老和医疗，费用是多少?";
+            viewModel.content = model.goods_price;
             [reArray addObject:viewModel];
         }
-        
         self.dataArray = reArray;
-    
         [self.refreshEndSubject sendNext:@(ZGMHeaderRefresh_HasMoreData)];
        
     }];
@@ -50,22 +47,20 @@
     }];
     
     [self.nextPageCommand.executionSignals.switchToLatest subscribeNext:^(NSDictionary *dict) {
-        
         @strongify(self);
-        
+        NSMutableArray *arr = [GuessModel mj_objectArrayWithKeyValuesArray:dict];
         NSMutableArray *reArray = [[NSMutableArray alloc] initWithArray:self.dataArray];
-        for (int i = 0; i < 8; i++) {
-            
-            MMVMCellViewModel *viewModel = [[MMVMCellViewModel alloc] init];
-            //viewModel.headerImageStr = @"http://mmbiz.qpic.cn/mmbiz/XxE4icZUMxeFjluqQcibibdvEfUyYBgrQ3k7kdSMEB3vRwvjGecrPUPpHW0qZS21NFdOASOajiawm6vfKEZoyFoUVQ/640?wx_fmt=jpeg&wxfrom=5";
-            viewModel.name = @"财税培训圈子";
+        for (int i = 0; i < arr.count; i++) {
+            GuessModel *model =arr[i];
+            MMVMCellViewModel *viewModel = [[MMVMCellViewModel alloc] initWithModel:model];
+            viewModel.headerImageStr = model.goods_image;
+            viewModel.name = model.goods_name;
             viewModel.articleNum = @"1568";
             viewModel.peopleNum = @"568";
             viewModel.topicNum = @"5749";
-            viewModel.content = @"自己交保险是不是只能交养老和医疗，费用是多少?";
+            viewModel.content = model.goods_price;
             [reArray addObject:viewModel];
         }
-        
         self.dataArray = reArray;
         [self.refreshEndSubject sendNext:@(ZGMFooterRefresh_HasMoreData)];
         
@@ -105,24 +100,23 @@
                 
                 @strongify(self);
                 self.currentPage = 1;
-//                [YPCNetworking postWithUrl:@"shop/orders/list"
-//                              refreshCache:YES
-//                                    params:@{
-//                                             @"pagination":@{
-//                                                     @"page":[NSString stringWithFormat:@"%zd",self.currentPage],
-//                                                     @"count":@"10"
-//                                                     },
-//                                             @"type":@""
-//                                             }
-//                                   success:^(id response) {
+                [YPCNetworking postWithUrl:@"shop/goods/guesslist"
+                              refreshCache:YES
+                                    params:@{
+                                             @"pagination":@{
+                                                     @"count":@"10",
+                                                     @"page":[NSString stringWithFormat:@"%zd",self.currentPage]
+                                                     }
+                                             }
+                                   success:^(id response) {
                 
-                                       [subscriber sendNext:@{@"1":@"1",@"2":@"2",@"3":@"3",@"4":@"4"}];
+                                       [subscriber sendNext:response[@"data"]];
                                        [subscriber sendCompleted];
-//                                   }
-//                                      fail:^(NSError *error) {
-//                                          [subscriber sendCompleted];
-//                                      }];
-//                
+                                   }
+                                      fail:^(NSError *error) {
+                                          [subscriber sendCompleted];
+                                      }];
+//
                return nil;
             }];
         }];
@@ -143,14 +137,13 @@
                 
                 @strongify(self);
                 self.currentPage ++;
-                [YPCNetworking postWithUrl:@"shop/orders/list"
+                [YPCNetworking postWithUrl:@"shop/goods/guesslist"
                               refreshCache:YES
                                     params:@{
                                              @"pagination":@{
-                                                     @"page":[NSString stringWithFormat:@"%zd",self.currentPage],
-                                                     @"count":@"10"
-                                                     },
-                                             @"type":@""
+                                                     @"count":@"10",
+                                                     @"page":[NSString stringWithFormat:@"%zd",self.currentPage]
+                                                     }
                                              }
                                    success:^(id response) {
                                        
